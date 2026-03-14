@@ -7,7 +7,9 @@ requires-python = ">= {{ cookiecutter.python_version }}"
 authors = [
     { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" }
 ]
-dependencies = []
+dependencies = [
+    "loguru>=0.7.0",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -19,4 +21,6 @@ packages = ["src/{{ cookiecutter.project_slug }}"]
 [tool.uv]
 dev-dependencies = [
     "pytest>=8.0.0",
+    "ruff>=0.3.0",
+    "pyright>=1.1.350",
 ]
