@@ -1,0 +1,9 @@
+{
+    "project_name": "My UV Project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_description": "A modern Python project managed by uv.",
+    "author_name": "Your Name",
+    "author_email": "your.email@example.com",
+    "python_version": "3.12",
+    "version": "0.1.0"
+}
