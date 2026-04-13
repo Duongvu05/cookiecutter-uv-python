@@ -7,7 +7,7 @@ A modern, research-oriented Python project template managed by **uv**. This temp
 To create a new project using this template, simply run:
 
 ```bash
-uv run cookiecutter https://github.com/Duongvu05/cookiecutter-uv-python
+uvx cookiecutter https://github.com/Duongvu05/cookiecutter-uv-python
 ```
 
 *Note: You don't need to install cookiecutter globally; `uv` will handle it for you.*
