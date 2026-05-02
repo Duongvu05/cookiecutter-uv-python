@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.360
+    hooks:
+      - id: pyright
+
+  # Fast unit tests only — slow/integration tests run in CI
+  - repo: local
+    hooks:
+      - id: pytest-fast
+        name: pytest (unit tests)
+        entry: uv run pytest
+        args: [tests/, -m, "not slow and not integration", --maxfail=1, -q]
+        language: system
+        pass_filenames: false
+        always_run: true
